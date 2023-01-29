@@ -1,5 +1,30 @@
-@media screen and (min-width: 0) {
-  
+footer{
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translate(-50%, 0);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}
+.link{
+  text-decoration: none;
+  color: #0087ca;
+  display: inline-block;
+}
+.link::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0; left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+.link:hover:after{
+  transform:scaleX(1);
+  transform-origin: bottom left;
 }
 
 body{
@@ -7,6 +32,7 @@ body{
   padding: 50px;
   padding-right: 15px;
   background-color: rgb(247, 247, 247);
+  position: relative;
 }
 
 .pink-border{
